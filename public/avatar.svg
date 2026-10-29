@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="avatarGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141E33"/>
+      <stop offset="100%" stop-color="#090E17"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E5AB"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#AA820A"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="48" height="48" rx="14" fill="url(#avatarGlow)" stroke="#D4AF37" stroke-width="1.2"/>
+  <circle cx="24" cy="24" r="18" stroke="#D4AF37" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.4"/>
+  <circle cx="24" cy="24" r="3" fill="#10B981"/>
+  <text x="24" y="31" font-family="'Playfair Display', Georgia, serif" font-size="20" font-weight="700" fill="url(#goldGrad)" text-anchor="middle">§</text>
+  
+  <!-- Indicador activo de IA en vivo -->
+  <circle cx="39" cy="9" r="3.5" fill="#10B981" stroke="#090E17" stroke-width="1.5"/>
+</svg>

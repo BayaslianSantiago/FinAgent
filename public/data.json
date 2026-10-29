@@ -1,0 +1,119 @@
+{
+  "summary": {
+    "mes_año": "2026-10",
+    "total_ingresos": 1200000.0,
+    "total_gastos": 874000.0,
+    "saldo_disponible": 326000.0,
+    "desglose_gastos": {
+      "necesidades_50": 820000.0,
+      "gustos_30": 54000.0,
+      "ahorro_inversion": 0.0
+    },
+    "porcentajes_actuales": {
+      "necesidades_pct": 68.3,
+      "gustos_pct": 4.5,
+      "ahorro_pct": 27.2
+    },
+    "presupuesto_planificado": {
+      "id": 1,
+      "usuario_id": 1,
+      "mes_año": "2026-10",
+      "ingreso_estimado": 1200000.0,
+      "limite_necesidades_50": 600000.0,
+      "limite_gustos_30": 360000.0,
+      "meta_ahorro_20": 240000.0,
+      "notas": "Fijado por el usuario: $1,200,000.00"
+    }
+  },
+  "transactions": [
+    {
+      "id": 17,
+      "tipo": "gasto",
+      "categoria": "Transporte",
+      "clasificacion_regla": "necesidad",
+      "monto": 200000.0,
+      "descripcion": "",
+      "fecha": "2026-10-28"
+    },
+    {
+      "id": 13,
+      "tipo": "gasto",
+      "categoria": "Gastos fijos",
+      "clasificacion_regla": "necesidad",
+      "monto": 200000.0,
+      "descripcion": "Gastos fijos adicionales",
+      "fecha": "2026-10-27"
+    },
+    {
+      "id": 6,
+      "tipo": "gasto",
+      "categoria": "Streaming",
+      "clasificacion_regla": "gusto",
+      "monto": 12000.0,
+      "descripcion": "Netflix y Spotify",
+      "fecha": "2026-10-24"
+    },
+    {
+      "id": 5,
+      "tipo": "gasto",
+      "categoria": "Salidas / Ocio",
+      "clasificacion_regla": "gusto",
+      "monto": 42000.0,
+      "descripcion": "Cena fin de semana",
+      "fecha": "2026-10-24"
+    },
+    {
+      "id": 4,
+      "tipo": "gasto",
+      "categoria": "Supermercado",
+      "clasificacion_regla": "necesidad",
+      "monto": 95000.0,
+      "descripcion": "Compras de alimentos y limpieza",
+      "fecha": "2026-10-24"
+    },
+    {
+      "id": 3,
+      "tipo": "gasto",
+      "categoria": "Servicios",
+      "clasificacion_regla": "necesidad",
+      "monto": 45000.0,
+      "descripcion": "Luz, Gas e Internet",
+      "fecha": "2026-10-24"
+    },
+    {
+      "id": 2,
+      "tipo": "gasto",
+      "categoria": "Alquiler",
+      "clasificacion_regla": "necesidad",
+      "monto": 280000.0,
+      "descripcion": "Alquiler departamento",
+      "fecha": "2026-10-24"
+    },
+    {
+      "id": 16,
+      "tipo": "ingreso",
+      "categoria": "Sueldo",
+      "clasificacion_regla": "ahorro",
+      "monto": 1200000.0,
+      "descripcion": "Actualización de ingreso mensual",
+      "fecha": "2026-10-01"
+    }
+  ],
+  "goals": [
+    {
+      "id": 1,
+      "nombre_meta": "Fondo de Emergencia",
+      "monto_objetivo": 1200000.0,
+      "monto_acumulado": 350000.0,
+      "fecha_limite": "2026-12-31",
+      "estado": "en_progreso"
+    }
+  ],
+  "user": {
+    "id": 1,
+    "username": "demo",
+    "nombre_completo": "Martín Gómez",
+    "perfil_inversor": "Moderado",
+    "fecha_registro": "2026-10-24 21:44:29"
+  }
+}

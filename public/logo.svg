@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <!-- Sello de Oro -->
+  <rect x="2" y="4" width="40" height="40" rx="10" fill="#0D1524" stroke="#D4AF37" stroke-width="1.5"/>
+  <circle cx="22" cy="24" r="14" stroke="#D4AF37" stroke-width="0.75" stroke-dasharray="2 2" opacity="0.6"/>
+  <text x="22" y="30" font-family="'Playfair Display', Georgia, serif" font-size="20" font-weight="700" fill="#D4AF37" text-anchor="middle">§</text>
+  
+  <!-- Tipografía FinAgent -->
+  <text x="52" y="27" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="18" font-weight="700" letter-spacing="0.04em" fill="#FFFFFF">Fin<tspan fill="#D4AF37">Agent</tspan></text>
+  <text x="53" y="38" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="7.5" font-weight="600" letter-spacing="0.16em" fill="#10B981" text-transform="uppercase">ASESOR FINANCIERO IA</text>
+</svg>

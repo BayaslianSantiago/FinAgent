@@ -1,0 +1,387 @@
+/* ==========================================================================
+   FINAGENT · SISTEMA DE DISEÑO INSTITUCIONAL DE ALTA GAMA
+   Paleta: Obsidian Navy (#090E17), Champagne Gold (#D4AF37), Emerald (#10B981)
+   Tipografías: Playfair Display, Plus Jakarta Sans, JetBrains Mono
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --bg-obsidian: #090E17;
+  --bg-card: rgba(13, 21, 36, 0.75);
+  --bg-card-hover: rgba(20, 31, 51, 0.85);
+  --bg-input: rgba(13, 21, 36, 0.9);
+  
+  --gold: #D4AF37;
+  --gold-light: #F3E5AB;
+  --gold-dark: #997819;
+  --gold-glow: rgba(212, 175, 55, 0.18);
+  
+  --emerald: #10B981;
+  --emerald-light: #6EE7B7;
+  --emerald-glow: rgba(16, 185, 129, 0.18);
+  
+  --text-primary: #FFFFFF;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-gold: rgba(212, 175, 55, 0.3);
+  --border-emerald: rgba(16, 185, 129, 0.3);
+  
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  --shadow-lux: 0 16px 40px -10px rgba(0, 0, 0, 0.6);
+  --shadow-gold: 0 0 24px -4px rgba(212, 175, 55, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   1. BASE & SCROLLBAR
+   -------------------------------------------------------------------------- */
+body, html, #root {
+  background-color: var(--bg-obsidian) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-sans) !important;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-obsidian);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* --------------------------------------------------------------------------
+   2. HEADER & BARRA SUPERIOR
+   -------------------------------------------------------------------------- */
+header, nav[role="navigation"], .cl-header {
+  background: rgba(9, 14, 23, 0.88) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid var(--border-light) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. PANTALLA DE LOGIN INSTITUCIONAL
+   -------------------------------------------------------------------------- */
+div[data-testid="login-container"], 
+.cl-login,
+form[data-testid="login-form"],
+div[class*="MuiPaper-root"][class*="login"],
+div:has(> form[action*="login"]) {
+  background: rgba(13, 21, 36, 0.85) !important;
+  backdrop-filter: blur(24px) !important;
+  border: 1px solid var(--border-gold) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), var(--shadow-gold) !important;
+}
+
+/* Títulos y Subtítulo Institucional en Login */
+form:has(button[type="submit"])::before {
+  content: "ISFT N° 197 · PROYECTO INTEGRADOR FINAL";
+  display: block;
+  text-align: center;
+  margin-bottom: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--emerald);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+form:has(button[type="submit"])::after {
+  content: "🔑 Acceso Demo: Usuario 'demo' | Clave 'demo123'";
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--gold);
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px dashed rgba(212, 175, 55, 0.35);
+  padding: 9px 14px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.03em;
+}
+
+form h1, form h2, div[data-testid="login-container"] h1 {
+  font-family: var(--font-serif) !important;
+  color: #FFFFFF !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Reemplazar logo genérico por FinAgent Monograma */
+a[href="/"] svg, header a svg {
+  display: none !important;
+}
+a[href="/"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  background-image: url('/public/logo.svg') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: left center !important;
+  width: 175px !important;
+  height: 42px !important;
+}
+
+/* Inputs en login y composer */
+input[type="text"], 
+input[type="password"], 
+input[type="email"] {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid var(--border-light) !important;
+  color: #FFFFFF !important;
+  border-radius: var(--radius-md) !important;
+  font-family: var(--font-sans) !important;
+  transition: all 0.25s ease !important;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+input[type="email"]:focus {
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 3px var(--gold-glow) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Botón principal (Login / Enviar) */
+button[type="submit"], 
+.cl-button-primary,
+button:has(svg path[d*="M2.01 21L23 12 2.01 3"]) {
+  background: linear-gradient(135deg, #D4AF37 0%, #AA820A 100%) !important;
+  color: #090E17 !important;
+  font-weight: 700 !important;
+  border: none !important;
+  border-radius: var(--radius-md) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3) !important;
+}
+
+button[type="submit"]:hover,
+.cl-button-primary:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.45) !important;
+  filter: brightness(1.1) !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. TARJETAS DE INICIO RÁPIDO (STARTERS)
+   -------------------------------------------------------------------------- */
+div[data-testid="starters"] button,
+.cl-starter,
+div:has(> .cl-starter) button,
+div[class*="starter"] {
+  background: rgba(13, 21, 36, 0.75) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: var(--radius-md) !important;
+  backdrop-filter: blur(12px) !important;
+  padding: 14px 18px !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35) !important;
+}
+
+div[data-testid="starters"] button:hover,
+.cl-starter:hover,
+div[class*="starter"]:hover {
+  background: rgba(20, 31, 51, 0.95) !important;
+  border-color: var(--gold) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), 0 0 16px var(--gold-glow) !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. MENSAJES Y BURBUJAS DE CONVERSACIÓN
+   -------------------------------------------------------------------------- */
+/* Mensaje del Asistente (FinAgent) */
+div[data-step-type="assistant_message"],
+div[class*="assistant-message"],
+div[class*="step"][data-is-user="false"] {
+  background: rgba(13, 21, 36, 0.6) !important;
+  border: 1px solid var(--border-light) !important;
+  border-left: 3px solid var(--gold) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+  padding: 16px 22px !important;
+  margin-bottom: 14px !important;
+}
+
+/* Mensaje del Usuario */
+div[data-step-type="user_message"],
+div[class*="user-message"],
+div[class*="step"][data-is-user="true"] {
+  background: rgba(212, 175, 55, 0.08) !important;
+  border: 1px solid var(--border-gold) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+  margin-bottom: 14px !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. CAJA DE TEXTO (COMPOSER / INPUT AREA)
+   -------------------------------------------------------------------------- */
+div[data-testid="chat-input-container"],
+div:has(> textarea[data-testid="chat-input"]),
+div[class*="chat-input"] {
+  background: rgba(13, 21, 36, 0.88) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid var(--border-gold) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.08) !important;
+  transition: all 0.25s ease !important;
+}
+
+div[data-testid="chat-input-container"]:focus-within {
+  border-color: var(--gold) !important;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7), 0 0 25px var(--gold-glow) !important;
+}
+
+textarea[data-testid="chat-input"] {
+  color: #FFFFFF !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.96rem !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. STEP ACCORDION (INDICADOR DE RAZONAMIENTO / TOOLS)
+   -------------------------------------------------------------------------- */
+div[class*="step-header"], 
+button:has(> span:contains("FinAgent analizando")) {
+  font-family: var(--font-mono) !important;
+  font-size: 0.82rem !important;
+  color: var(--gold) !important;
+  background: rgba(212, 175, 55, 0.06) !important;
+  border: 1px solid rgba(212, 175, 55, 0.2) !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+/* --------------------------------------------------------------------------
+   8. COMPONENTES FINANCIEROS ENRIQUECIDOS (HTML EN MENSAJES)
+   -------------------------------------------------------------------------- */
+.fin-card {
+  background: rgba(13, 21, 36, 0.85);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin: 12px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.fin-card.gold-accent {
+  border-top: 3px solid var(--gold);
+}
+
+.fin-card.emerald-accent {
+  border-top: 3px solid var(--emerald);
+}
+
+.fin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.fin-badge.gold {
+  color: var(--gold);
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid var(--border-gold);
+}
+
+.fin-badge.emerald {
+  color: var(--emerald);
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid var(--border-emerald);
+}
+
+.fin-badge.blue {
+  color: #38BDF8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+/* Barra de progreso 50/30/20 */
+.fin-meter-wrap {
+  margin: 14px 0 8px 0;
+}
+.fin-meter-bar {
+  display: flex;
+  height: 10px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-light);
+}
+.fin-meter-seg {
+  height: 100%;
+  transition: width 0.6s ease;
+}
+.fin-meter-seg.necesidades { background: #38BDF8; }
+.fin-meter-seg.gustos { background: #F59E0B; }
+.fin-meter-seg.ahorro { background: var(--emerald); }
+
+/* Tablas formateadas */
+table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 12px 0 !important;
+  font-size: 0.88rem !important;
+}
+
+th {
+  background: rgba(212, 175, 55, 0.08) !important;
+  color: var(--gold) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  padding: 10px 14px !important;
+  border-bottom: 1px solid var(--border-gold) !important;
+  text-align: left !important;
+}
+
+td {
+  padding: 9px 14px !important;
+  border-bottom: 1px solid var(--border-light) !important;
+  color: var(--text-secondary) !important;
+}
+
+tr:hover td {
+  background: rgba(255, 255, 255, 0.02) !important;
+  color: #FFFFFF !important;
+}
+
+/* Cita y Descargo Ético */
+blockquote {
+  border-left: 3px solid var(--gold) !important;
+  padding: 10px 16px !important;
+  margin: 12px 0 !important;
+  background: rgba(212, 175, 55, 0.04) !important;
+  color: var(--text-secondary) !important;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0 !important;
+  font-style: italic !important;
+}
